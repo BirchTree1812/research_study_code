@@ -8,4 +8,4 @@ It will use Difference-in-Difference method, as well as the Carbon Rerouting ind
 ## Obtaining the Data
 
 Here is the data that I need for my project, with links to sources.
-[sea-distances.org] (sea-distances.org)
+[sea-distances.org](sea-distances.org)
