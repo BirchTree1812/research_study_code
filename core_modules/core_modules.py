@@ -2,7 +2,7 @@
 
 from geopy.distance import great_circle
 import searoute as sr
-import dictionaries as dict
+import coordinates as coord
 
 # a function for computing distances
 def compute_distance(row, departure_coords, destination_coords, by_sea, departure_code = None, destination_code = None):
@@ -15,7 +15,7 @@ def compute_distance(row, departure_coords, destination_coords, by_sea, departur
         origin = departure_coords[row[departure_code]]
     else:
         origin = departure_coords
-    if  isinstance(departure_coords, dict):
+    if isinstance(destination_coords, dict):
         dest = destination_coords[row[destination_code]]
     else:
         dest = destination_coords
@@ -30,5 +30,5 @@ def compute_distance(row, departure_coords, destination_coords, by_sea, departur
 def compute_co2(row, transportation_type):
     weight = row[transportation_type]
     dist = row["distance"]
-    co2_coeff = dict.ton_km[row["cty_code"]]
+    co2_coeff = coord.ton_km[row["cty_code"]]
     return weight * dist * co2_coeff

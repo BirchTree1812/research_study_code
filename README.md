@@ -9,11 +9,11 @@ It will use Difference-in-Difference method, as well as the Carbon Rerouting ind
 
 Here is the data that I need for my project, with links to sources.
 
-[https://comtradeplus.un.org/](https://comtradeplus.un.org/) - United Nations' international trade database.
+[https://comtradeplus.un.org/](https://comtradeplus.un.org/) - ~~United Nations' international trade database~~ not used.
 
-[Ember Energy](https://ember-energy.org/latest-insights/global-electricity-review-2025/major-countries-and-regions/) - main source for core data.
+[Ember Energy](https://ember-energy.org/latest-insights/global-electricity-review-2025/major-countries-and-regions/) - main source for ton-km data.
 
-[Country list](https://www.census.gov/foreign-trade/schedules/c/country.txt) - 
+[Country list](https://www.census.gov/foreign-trade/schedules/c/country.txt) - list of country codes that Census.gov uses in their data.
 ## Cleaning
 
 As usual, cleaning the data will the the most time-consuming part here.
