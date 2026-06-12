@@ -21,7 +21,11 @@ def compute_distance(row, departure_coords, destination_coords, by_sea, departur
         dest = destination_coords
     # if this is sea distance, use the searoute model
     if by_sea == True:
-        return sr.searoute(origin, dest).properties["length"]
+        route = sr.searoute(origin, dest)
+        if route.get("type") == "FeatureCollection":
+            return float(route["features"][0]["properties"]["length"])
+        else:
+            return float(route["properties"]["length"])
     # if this is land distance, use great_circle from geopy.distance module. Note that great_circle takes (longitude, latitude) coordinates, 
     # inverse of how they're usually written
     else: 
