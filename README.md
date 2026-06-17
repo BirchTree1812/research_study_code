@@ -1,6 +1,7 @@
 # Overview
 
-The goal of this project is to analyze the influence of the USA's 2025 tariffs(that includes Liberation Day and June 2025 steel tariffs) on carbon footprint of supply chains for washing machines. 
+The goal of this project is to analyze the influence of the USA's 2025 tariffs(that includes Liberation Day and June 2025 steel tariffs) on carbon footprint of supply chains for washing machines.
+ 
 It will use Difference-in-Difference method, as well as the Carbon Rerouting index
 
 # Data Cycle
