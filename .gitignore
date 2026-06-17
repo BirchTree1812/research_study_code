@@ -1,4 +1,5 @@
 data/original/*.txt
 *.pdf
 *.md
+!README.md
 *.zip
