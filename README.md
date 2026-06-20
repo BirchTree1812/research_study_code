@@ -45,7 +45,7 @@ First, we must assemble an econometric model.
 
 Let us start with a basic 2x2 regression equation:
 
-$Y_i$ = $\alpha + \beta*ifTariffShock\_c*\delta*PostTariff\_t+\gamma*(ifTariffShock*PostTariff)+\epsilon_i$
+$Y_i$ = $\alpha + \beta*ifTariffShock\_c$ $*\delta*PostTariff\_t+\gamma*(ifTariffShock*PostTariff)+\epsilon_i$
 
 + $Y_i$ represents grams of CO2 emissions of supply chains of imports from a particular country $c$ at a certain time $t$
 + ifTariffShock_c is a boolean that represents if a country has been affected by the tariff shock. 1 if it is, 0 if not.
