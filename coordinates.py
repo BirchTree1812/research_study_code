@@ -20,31 +20,73 @@ asian_origins = {
 
 
 us_ports = {
+    # --- Northeast / New England ---
+    "0401": [ -78.893,  42.883],  # Buffalo, NY (Lake Erie / Niagara Frontier)
+    "0712": [ -75.143,  39.940],  # Philadelphia, PA (Packer Ave Marine Terminal)
+    "0901": [ -70.960,  42.358],  # Boston, MA (Conley Container Terminal)
+    "1001": [ -74.017,  40.700],  # New York, NY (Red Hook, Brooklyn)
     "1003": [ -74.165,  40.685],  # Newark, NJ (Port Newark/Elizabeth)
+    "1012": [ -74.010,  40.660],  # New York, NY (secondary terminal)
+    "1108": [ -75.143,  39.960],  # Philadelphia, PA (Tioga Marine Terminal)
+    # --- Mid-Atlantic / Southeast ---
     "1303": [ -76.535,  39.265],  # Baltimore, MD (Seagirt Marine Terminal)
     "1401": [ -76.330,  36.880],  # Norfolk/Newport News, VA
+    "1501": [ -77.955,  34.235],  # Wilmington, NC
     "1601": [ -79.911,  32.852],  # Charleston, SC
     "1703": [ -81.140,  32.115],  # Savannah, GA (Garden City Terminal)
     "1801": [ -82.456,  27.910],  # Tampa, FL
     "1803": [ -81.534,  30.395],  # Jacksonville, FL (Blount Island/Dames Point)
+    # --- Gulf Coast ---
     "1901": [ -88.040,  30.690],  # Mobile, AL
     "2002": [ -90.060,  29.940],  # New Orleans, LA
+    "2006": [ -89.090,  30.368],  # Gulfport, MS
+    # --- Southern border (land/air entry — ves_swt_mo typically 0) ---
+    "2303": [ -99.507,  27.520],  # Laredo, TX
+    "2304": [ -97.494,  25.961],  # Brownsville, TX
+    "2507": [-110.934,  31.340],  # Nogales, AZ
+    # --- Southern California ---
     "2704": [-118.265,  33.733],  # Los Angeles, CA
     "2709": [-118.216,  33.755],  # Long Beach, CA
-    "2809": [-122.395,  37.795],  # San Francisco, CA
+    "2720": [-117.170,  32.706],  # San Diego, CA (10th Ave Marine Terminal)
+    # --- Northern California ---
+    "2801": [-122.390,  37.800],  # San Francisco, CA (Pier 80)
+    "2809": [-122.395,  37.795],  # San Francisco, CA (main terminal)
     "2811": [-122.290,  37.795],  # Oakland, CA
+    # --- Pacific Northwest ---
     "2904": [-122.755,  45.585],  # Portland, OR
     "3001": [-122.330,  47.610],  # Seattle, WA
     "3002": [-122.430,  47.275],  # Tacoma, WA
+    "3004": [-123.434,  48.118],  # Port Angeles, WA
+    # --- Alaska ---
     "3126": [-149.890,  61.235],  # Anchorage, AK
+    # --- Hawaii ---
     "3201": [-157.870,  21.310],  # Honolulu, HI
+    # --- Pacific territories ---
+    "3303": [ 144.794,  13.444],  # Apra Harbor, Guam
+    "3310": [ 145.745,  15.188],  # Saipan, CNMI
+    # --- Interior / other (approx — ves_swt_mo typically 0 for washing machines) ---
+    "3401": [ -87.630,  41.850],  # Interior customs office (approx)
+    "3501": [ -93.265,  44.977],  # Minneapolis, MN (Mississippi River port)
+    "3604": [-119.213,  34.151],  # Port Hueneme, CA (Channel Islands Harbor)
+    # --- Great Lakes (upper) ---
+    "3801": [ -92.101,  46.780],  # Duluth-Superior, MN/WI
+    "3802": [ -87.447,  41.663],  # Indiana Harbor, IN (Lake Michigan)
+    # --- Chicago / inland (exclude from sea analysis) ---
     "3901": [ -87.620,  41.880],  # Chicago, IL (Great Lakes / inland)
-    "4101": [ -81.700,  41.500],  # Cleveland, OH (Great Lakes)
+    # --- Great Lakes (Lake Erie / Ohio) ---
+    "4101": [ -81.700,  41.500],  # Cleveland, OH
+    "4102": [ -83.540,  41.663],  # Toledo, OH (Lake Erie)
+    "4103": [ -82.706,  41.449],  # Sandusky, OH (Lake Erie)
+    "4110": [ -80.799,  41.865],  # Ashtabula, OH (Lake Erie)
+    "4115": [ -80.554,  41.966],  # Conneaut, OH (Lake Erie)
+    # --- Caribbean ---
     "4909": [ -66.100,  18.450],  # San Juan, PR
+    # --- South Florida ---
     "5201": [ -80.165,  25.778],  # Miami, FL (PortMiami)
     "5203": [ -80.116,  26.090],  # Port Everglades, FL
     "5206": [ -80.290,  25.796],  # Miami International AIRPORT — exclude from sea analysis
-    "5301": [ -95.020,  29.733]  # Houston, TX
+    # --- Texas ---
+    "5301": [ -95.020,  29.733],  # Houston, TX
 }
 
 mexico_start = [-100.310, 25.671]

@@ -3,3 +3,4 @@ data/original/*.txt
 *.md
 !README.md
 *.zip
+*.ZIP
