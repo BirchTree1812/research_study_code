@@ -2,6 +2,71 @@
 I will define coordinates for country codes of origin country("cty_code") and codes representing US ports of arrival("port_full")
 I assume that each country has one main port, from which it exports its goods."""
 
+
+# Correct colspecs for ISTHS6M (State HS6 Imports), record length 258
+colspecs_land = [
+    (0, 6),      # commodity (6-digit HS code)
+    (6, 10),     # cty_code (4-digit country code)
+    (10, 12),    # state (2-letter postal)
+    (12, 16),    # year
+    (16, 18),    # month
+    (18, 33),    # gen_val_mo (general imports total value)
+    (33, 48),    # con_val_mo (imports for consumption value)
+    (48, 63),    # air_val_mo
+    (63, 78),    # air_swt_mo (air shipping weight, kg)
+    (78, 93),    # ves_val_mo
+    (93, 108),   # ves_swt_mo (vessel shipping weight, kg)
+    (108, 123),  # cnt_val_mo (containerized vessel value)
+    (123, 138),  # cnt_swt_mo (containerized vessel weight)
+    (138, 153),  # gen_val_yr (year-to-date)
+    (153, 168),  # con_val_yr
+    (168, 183),  # air_val_yr
+    (183, 198),  # air_swt_yr
+    (198, 213),  # ves_val_yr
+    (213, 228),  # ves_swt_yr
+    (228, 243),  # cnt_val_yr
+    (243, 258),  # cnt_swt_yr
+]
+names_land = ['commodity', 'cty_code', 'state', 'year', 'month',
+         'gen_val_mo', 'con_val_mo', 'air_val_mo', 'air_swt_mo',
+         'ves_val_mo', 'ves_swt_mo', 'cnt_val_mo', 'cnt_swt_mo',
+         'gen_val_yr', 'con_val_yr', 'air_val_yr', 'air_swt_yr',
+         'ves_val_yr', 'ves_swt_yr', 'cnt_val_yr', 'cnt_swt_yr']
+
+str_cols_land = ['commodity', 'cty_code', 'state', 'year', 'month']
+
+
+# and this is information for how to unpack PORTHS6MM files
+colspecs_sea = [
+    (0, 6),      # commodity (6-digit HS code)
+    (6, 10),     # cty_code (Schedule C, 4-digit)
+    (10, 12),    # dist_unlade (Schedule D district, 2-digit)
+    (12, 14),    # port_unlade (Schedule D port within district, 2-digit)
+    (14, 18),    # year
+    (18, 20),    # month
+    (20, 35),    # gen_val_mo  (general imports value, this month)
+    (35, 50),    # air_val_mo
+    (50, 65),    # air_swt_mo  (air shipping weight, kg)
+    (65, 80),    # ves_val_mo
+    (80, 95),    # ves_swt_mo  (vessel shipping weight, kg)
+    (95, 110),   # cnt_val_mo  (containerized vessel value)
+    (110, 125),  # cnt_swt_mo  (containerized vessel weight)
+    (125, 140),  # gen_val_yr  (year-to-date totals begin)
+    (140, 155),  # air_val_yr
+    (155, 170),  # air_swt_yr
+    (170, 185),  # ves_val_yr
+    (185, 200),  # ves_swt_yr
+    (200, 215),  # cnt_val_yr
+    (215, 230),  # cnt_swt_yr
+]
+names_sea = ['commodity', 'cty_code', 'dist_unlade', 'port_unlade', 'year', 'month',
+         'gen_val_mo', 'air_val_mo', 'air_swt_mo', 'ves_val_mo', 'ves_swt_mo',
+         'cnt_val_mo', 'cnt_swt_mo',
+         'gen_val_yr', 'air_val_yr', 'air_swt_yr', 'ves_val_yr', 'ves_swt_yr',
+         'cnt_val_yr', 'cnt_swt_yr']
+str_cols_sea = ['commodity', 'cty_code', 'dist_unlade', 'port_unlade', 'year', 'month']
+
+
 ton_km = {
     "5700": 4,
     "5800": 4.5, 
