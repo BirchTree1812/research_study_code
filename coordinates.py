@@ -77,10 +77,10 @@ ton_km = {
 
 # dictionaries of coordinates are necessary.
 asian_origins = {
-    "5700": [121.470,  31.230],   
-    "5800": [129.040,  35.100], 
-    "5520": [106.780,  10.780],
-    "5330": [ 69.710,  22.740]
+    "5700": [121.470,  31.230],   # China
+    "5800": [129.040,  35.100], # South Korea
+    "5520": [106.780,  10.780], # Vietnam
+    "5330": [ 69.710,  22.740] # India
 }
 
 # this is an exhaustive list of US ports of arrival and their coordinates. It is necessary to avoid a key error, even though not all ports are used in the analysis.
