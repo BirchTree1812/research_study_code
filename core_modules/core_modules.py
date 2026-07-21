@@ -32,7 +32,8 @@ def compute_distance(row, departure_coords, destination_coords, by_sea, departur
         return great_circle(origin[::-1], dest[::-1]).km * 1.3
 
 def compute_co2(row, transportation_type):
+    # the CO2 calculation function. Because the weights of goods imported are in kg, and CO2 index is ton-km, I convert to CO2 tons by dividing by 1000
     weight = row[transportation_type]
     dist = row["distance"]
     co2_coeff = coord.ton_km[row["cty_code"]]
-    return weight * dist * co2_coeff
+    return weight * dist * co2_coeff/1000

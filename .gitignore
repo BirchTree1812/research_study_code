@@ -4,3 +4,4 @@ data/original/*.txt
 !README.md
 *.zip
 *.ZIP
+*.parquet
