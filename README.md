@@ -20,6 +20,9 @@ Here is the data that I need for my project, with links to sources.
 
 [Country list](https://www.census.gov/foreign-trade/schedules/c/country.txt) - list of country codes that the Census Bureau uses in their data.
 
+Office of the President. Executive Order 14326, "Further Modifying the Reciprocal Tariff Rates." Federal Register, vol. 90, no. 149, 6 Aug. 2025, pp. 37963–67, www.federalregister.gov/documents/2025/08/06/2025-15010/further-modifying-the-reciprocal-tariff-rates.
+ - information for tariff rates on China, Vietnam, India, South Korea.
+
 ## Cleaning
 
 As usual, cleaning the data will the the most time-consuming part here. For each of two periods(Dec 2024 and Dec 2025), there were two dataframes - one for land-based imports from Mexico(using the "State Imports HS6" dataset), another for naval imports from Asian countries(using the "Port HS6 Imports") dataset. 

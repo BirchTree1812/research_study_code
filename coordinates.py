@@ -35,6 +35,11 @@ names_land = ['commodity', 'cty_code', 'state', 'year', 'month',
 
 str_cols_land = ['commodity', 'cty_code', 'state', 'year', 'month']
 
+# dictionary of tariff rates for washing machines in 2025 tied to country codes
+# Mexico is the exception, since some goods fell under the USMCA exemption in August. 
+# Thus, we can assume that for Mexico, the dose is between 0 and 0.25 * (1-0.84) 
+
+tariff_rate = {"5700": 0.20, "5800": 0.15, "5520": 0.20, "5330": 0.50, "2010": 0.25}
 
 # and this is information for how to unpack PORTHS6MM files
 colspecs_sea = [
