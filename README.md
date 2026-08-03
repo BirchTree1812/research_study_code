@@ -10,18 +10,16 @@ It will use Difference-in-Difference method, as well as the Carbon Rerouting ind
 
 Here is the data that I need for my project, with links to sources.
 
-[https://comtradeplus.un.org/](https://comtradeplus.un.org/) - ~~United Nations' international trade database~~ not used, as US Census Bureau is a more comprehensive source for all the necessary data(see below). May be used for a sanity check later on.
-
 [Ember Energy](https://ember-energy.org/latest-insights/global-electricity-review-2025/major-countries-and-regions/) - main source for ton-km data.
 
 [US Census Bureau: State Imports HS6](https://www.census.gov/foreign-trade/data/ISTHSM.html) - data on tonnage/value/origin/destination of imported goods. Contains data on specific states of destination, so the project uses it for inland imports from Mexico.
 
-[US Census Bureau: Port HS6 Imports](https://www.census.gov/foreign-trade/data/PORTHS6MM.html) - data on tonnage/value/origin/destination of imported goods. Contains information on ports of destination, but NOT the destionation states, which makes the project use this dataset for imports from Asian countries(India/China/South Korea/Vietnam)
+[US Census Bureau: Port HS6 Imports](https://www.census.gov/foreign-trade/data/PORTHS6MM.html) - data on tonnage/value/origin/destination of imported goods. Contains information on ports of destination, but NOT the destionation states, which makes the project use this dataset for imports from Asian countries(China/South Korea/Vietnam)
 
 [Country list](https://www.census.gov/foreign-trade/schedules/c/country.txt) - list of country codes that the Census Bureau uses in their data.
 
 Office of the President. Executive Order 14326, "Further Modifying the Reciprocal Tariff Rates." Federal Register, vol. 90, no. 149, 6 Aug. 2025, pp. 37963–67, www.federalregister.gov/documents/2025/08/06/2025-15010/further-modifying-the-reciprocal-tariff-rates.
- - information for tariff rates on China, Vietnam, India, South Korea.
+ - information for tariff rates on China, Vietnam, South Korea.
 
 ## Cleaning
 
@@ -43,30 +41,7 @@ I began with a simple 2x2 difference-in-difference model that involves only the 
 As a result, there has been no change in CO2 emissions of the supply chain. 
 
 ## Statistics Analysis
+A OLS model, with DiD estimator and HC3 covariance. R²=0 for all trials, regardless of improvements to the model. Given the full pass-through of tariffs(Flaen, et al.), this can be explained by high elasticity of demand.
 
-First, we must assemble an econometric model.
-
-Let us start with a basic 2x2 regression equation:
-
-$Y_i$ = $\alpha + \beta * ifTariffShock\_c$ $*\delta*PostTariff\_t+\gamma*(ifTariffShock*PostTariff)+\epsilon_i$
-
-+ $Y_i$ represents grams of CO2 emissions of supply chains of imports from a particular country $c$ at a certain time $t$
-+ ifTariffShock_c is a boolean that represents if a country has been affected by the tariff shock. 1 if it is, 0 if not.
-+ PostTariff_t is a boolean that represents if the observation takes place before or after the tariff. 0 if the date is Dec 2024, 1 if it's Dec 2025
-+ $\gamma$ is the difference-in-differences estimator.
-
-For the model, we need the following assumptions:
-+ Parallel trends
-    + Flaaen, Hortaçsu & Tintelnot (2020) did this by comparing the trends of the treatment group(washing machines) with the control group(refrigerators, dishwashes and other un-tariffed appliances) before the tariffs.
-    + We do this because we cannot see what the countries would've done WITHOUT tariffs. However, we CAN test whether these groups moved in parallel before the tariff.
-    + Pre-trend plot necessary to demonstrate it?
-+ Anticipation
-    + Expectations shape economics. If the importers already knew that the tariffs would've happened, this would've influenced their behavior compared to if they didn't know about the tariffs beforehand.
-    + Announcements come many weeks before the actual tariff, as evidenced by Freund et al. (2024). 
-+ Error correlates over time within a country
-    + How do we address that?
-+ Seasonality
-    + We assume that washing machine demand is affected by seasons. To avoid the error caused by that, we compare the same month of a different year(Dec 2024 and Dec 2025) respectively. 
-    + The announcement date for Liberation Day Tariffs was Feb 13th 2025, so this covers the "anticipation" assumption
-+ Semiconductor tariff exception for TV sets is valid
-    + While the language around the tariff exception for semiconductors doesn't clarify(rewrite? how exactly is the ambiguity problematic?) the status of TV sets, we assume that they fall under that exemption, and that every party in the supply chain of TVs recognizes that.
+![alt text](image.png)
+Fig. 4 - Fourth revision of the experiment. Mexico's data has been integrated into the port dataset, since port codes also describe land ports. The skew and kurtosis have increased significantly after that. Still R²=0
