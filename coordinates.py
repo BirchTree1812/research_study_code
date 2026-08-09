@@ -36,10 +36,7 @@ names_land = ['commodity', 'cty_code', 'state', 'year', 'month',
 str_cols_land = ['commodity', 'cty_code', 'state', 'year', 'month']
 
 # dictionary of tariff rates for washing machines in 2025 tied to country codes
-# Mexico is the exception, since some goods fell under the USMCA exemption in August. 
-# Thus, we can assume that for Mexico, the dose is between 0 and 0.25 * (1-0.84) 
-
-tariff_rate = {"5700": 0.20, "5800": 0.15, "5520": 0.20, "5330": 0.50, "2010": 0.04}
+tariff_rate = {"5700": 0.20, "5800": 0.15, "5520": 0.20, "5330": 0.50}
 
 # and this is information for how to unpack PORTHS6MM files
 colspecs_sea = [
@@ -74,10 +71,9 @@ str_cols_sea = ['commodity', 'cty_code', 'dist_unlade', 'port_unlade', 'year', '
 
 ton_km = {
     "5700": 4,
-    "5800": 4.5, 
-    "5520": 7, 
+    "5800": 4.5,
+    "5520": 7,
     "5330": 6,
-    "2010": 80 
 }
 
 # dictionaries of coordinates are necessary.
@@ -260,7 +256,6 @@ us_ports = {
     "5507": [ -96.797,  32.776],  # Dallas area (inland)
 }
 
-mexico_start = [-100.310, 25.671]
 
 state_centroids = {
     "AK": [-153.369, 64.200],
