@@ -78,3 +78,9 @@ Added the dose version. Omnibus increased from 3 to 8, while Prob(omnibus) decre
 
 ![alt text](image.png)
 Fig. 4 - Fourth revision of the experiment. Mexico's data has been integrated into the port dataset, since port codes also describe land ports. The skew and kurtosis have increased significantly after that. Still R²=0
+
+![alt text](image-1.png)
+Fig. 5 - fifth revision of the experiment. Mexico's data has been dropped due to tariffs being negligible.
+
+![alt text](image-2.png)
+Fig 6 - pre-trend analysis. It shows that treated and untreated were already diverging before the tariffs.
