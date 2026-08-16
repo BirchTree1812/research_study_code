@@ -4,6 +4,15 @@ The goal of this project is to analyze the influence of the USA's 2025 tariffs(t
  
 It will use Difference-in-Difference method.
 
+# Usage
+
+First, download the four datasets from https://zenodo.org/records/21964130 into the repository "research_study_code/data/original".
+Then run the following commands:
+
+```
+pip install -r requirements.txt
+```
+
 # Data Cycle
 
 ## Obtaining the Data

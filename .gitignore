@@ -5,3 +5,4 @@ data/original/*.txt
 *.zip
 *.ZIP
 *.parquet
+*.csv
