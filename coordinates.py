@@ -38,7 +38,7 @@ str_cols_land = ['commodity', 'cty_code', 'state', 'year', 'month']
 # dictionary of tariff rates for washing machines in 2025 tied to country codes
 # Mexico is the exception, since some goods fell under the USMCA exemption in August.
 # Thus, we can assume that for Mexico, the dose is between 0 and 0.25 * (1-0.84)
-tariff_rate = {"5700": 0.20, "5800": 0.15, "5520": 0.20, "5330": 0.50, "2010": 0.04}
+tariff_rate = {"5700": 0.20, "5800": 0.15, "5520": 0.20, "2010": 0.04}
 
 # and this is information for how to unpack PORTHS6MM files
 colspecs_sea = [
@@ -75,16 +75,14 @@ ton_km = {
     "5700": 4,
     "5800": 4.5,
     "5520": 7,
-    "5330": 6,
     "2010": 80,
 }
 
 # dictionaries of coordinates are necessary.
 asian_origins = {
     "5700": [121.470,  31.230],   # China
-    "5800": [129.040,  35.100], # South Korea
-    "5520": [106.780,  10.780], # Vietnam
-    "5330": [ 69.710,  22.740] # India
+    "5800": [129.040,  35.100],   # South Korea
+    "5520": [106.780,  10.780],   # Vietnam
 }
 
 # this is an exhaustive list of US ports of arrival and their coordinates. It is necessary to avoid a key error, even though not all ports are used in the analysis.
