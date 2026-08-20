@@ -93,3 +93,9 @@ Fig. 5 - fifth revision of the experiment. Mexico's data has been dropped due to
 
 ![alt text](image-2.png)
 Fig 6 - pre-trend analysis. It shows that treated and untreated were already diverging before the tariffs.
+
+![alt text](image-3.png)
+Fig. 7 - sixth revision of the experiment. Mexico's data has been re-integrated due to its importance of having high treatment of 0.46. However, India's data has been dropped due to having too little representation and too little weight.
+
+![alt text](image-4.png)
+Fig. 8 - seventh revision, the true final result. It shows that the steel tariffs have actually shortened the trade routes.
